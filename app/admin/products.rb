@@ -15,4 +15,7 @@ ActiveAdmin.register Product do
   #   permitted
   # end
   
+  index as: :grid do |product|
+    link_to image_tag(product.avatar.url(:thumb)), admin_product_path(product)
+  end
 end
